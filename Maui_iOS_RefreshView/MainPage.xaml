@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui_iOS_RefreshView.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="refresh"
+                     Clicked="MenuItem_OnClicked" />
+    </ContentPage.ToolbarItems>
+    <RefreshView x:Name="RefreshView"
+                 Padding="16">
+        <ScrollView>
+            <StackLayout x:Name="Content">
+            </StackLayout>
+        </ScrollView>
+    </RefreshView>
+</ContentPage>
