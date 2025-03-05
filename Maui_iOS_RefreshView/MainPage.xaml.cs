@@ -20,7 +20,7 @@ public partial class MainPage : ContentPage
         await Task.Delay(2000);
         Content.Clear();
 
-        Content.Children.Add(new Label { Text = "Some layout" });
+        Content.Children.Add(new Label { Text = DateTime.Now.ToLongTimeString() });
         Content.Children.Add(new Button {
             Text = "Open Subpage",
             Command = new Command(async () => await Navigation.PushAsync(new ContentPage() {
