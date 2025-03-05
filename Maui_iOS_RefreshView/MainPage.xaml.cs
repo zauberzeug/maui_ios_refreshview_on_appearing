@@ -9,15 +9,9 @@ public partial class MainPage : ContentPage
         RefreshView.Command = new Command(Reload);
     }
 
-    bool waitBeforeRefreshing;
-
-    protected override async void OnAppearing()
+    protected override void OnAppearing()
     {
         base.OnAppearing();
-        if (waitBeforeRefreshing)
-            await Task.Delay(100);
-
-        waitBeforeRefreshing = !waitBeforeRefreshing;
         RefreshView.IsRefreshing = true;
     }
 
